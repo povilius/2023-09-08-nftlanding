@@ -1,0 +1,131 @@
+@use 'colors';
+
+.showcase-title {
+  color: colors.$black;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.showcase-text {
+  color: colors.$dark-grey;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 24px;
+  margin-bottom: 56px;
+
+  .underline {
+    color: colors.$dark-grey;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    text-decoration-line: underline; 
+  }
+}
+
+.showcase-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .showcase-item-1,
+  .showcase-item-2,
+  .showcase-item-3,
+  .showcase-item-4 {
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$light-grey;
+    border-radius: 16px;
+
+    .showcase-info-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 24px 23px 24px 24px;
+
+      .left-side {
+        width: 50%;
+
+        .series-name {
+          color: colors.$orange;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 100%;
+          text-transform: uppercase;
+          margin: 0;
+        }
+
+        .showcase-title {
+          color: colors.$black;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 100%;
+          margin-top: 12px;
+          margin-bottom: 12px;
+        }
+
+        .showcase-code {
+          color: colors.$lighter-grey;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%;
+          margin: 0;
+        }
+      }
+
+      .right-side {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .showcase-populiarity {
+          color: colors.$lighter-grey;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 100%;
+          text-transform: uppercase;
+          margin: 0;
+        }
+
+        .showcase-price-wrapper {
+          display: flex;
+          align-items: center;
+
+          .showcase-currency-icon {
+            display: flex;
+            height: 40%;
+            margin-right: 8px;
+          }
+
+          .showcase-cost {
+            color: colors.$black;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            margin-top: 12px;
+            margin-bottom: 12px;
+          }
+        }
+
+        .showcase-timer {
+          color: colors.$lighter-grey;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
