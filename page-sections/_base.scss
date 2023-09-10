@@ -19,6 +19,7 @@ body {
   padding-right: 50px;
 
   @include responsive.mobile {
+    max-width: 430px;
     padding-left: 20px;
     padding-right: 20px;
   }
