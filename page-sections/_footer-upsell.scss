@@ -104,6 +104,11 @@
         margin-bottom: 20px;
       }
     }
+
+    .sign-up-button:hover {
+      background-color: colors.$pink;
+      color: white;
+    }
   }
 
   .footer-upsell-image-wrapper {

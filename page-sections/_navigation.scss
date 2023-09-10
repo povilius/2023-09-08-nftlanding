@@ -35,7 +35,6 @@
 
       @include responsive.md {
         display: none;
-        
       }
 
       
@@ -47,6 +46,7 @@
         text-decoration: none;
         color: colors.$dark-grey;
         display: inline-block;
+        transition-duration: 0.3s;
 
         @include responsive.md {
           font-size: 15px;
@@ -56,6 +56,11 @@
       a.color-pink {
         text-transform: capitalize;
         color: colors.$pink;
+        transition-duration: 0.3s;
+      }
+
+      a.menu-link:hover {
+        text-decoration: underline;
       }
     }
   }

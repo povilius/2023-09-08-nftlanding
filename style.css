@@ -69,6 +69,7 @@ body {
   text-decoration: none;
   color: #555;
   display: inline-block;
+  transition-duration: 0.3s;
 }
 @media (max-width: 1024px) {
   .header-wrapper .main-navigation ul.main-menu a.menu-link {
@@ -78,6 +79,10 @@ body {
 .header-wrapper .main-navigation ul.main-menu a.color-pink {
   text-transform: capitalize;
   color: #FF3998;
+  transition-duration: 0.3s;
+}
+.header-wrapper .main-navigation ul.main-menu a.menu-link:hover {
+  text-decoration: underline;
 }
 
 .hero-box {
@@ -175,9 +180,7 @@ body {
   border-width: 2px;
   border-color: #FF3998;
   display: inline-block;
-  transition-property: background-color, color, border-color;
   transition-duration: 0.3s;
-  transition-timing-function: ease;
 }
 @media (max-width: 1024px) {
   .hero-box .title-wrapper .sign-up-button {
@@ -189,6 +192,10 @@ body {
   .hero-box .title-wrapper .sign-up-button {
     margin-top: 30px;
   }
+}
+.hero-box .title-wrapper .sign-up-button:hover {
+  background-color: #FF3998;
+  color: white;
 }
 .hero-box .title-image {
   width: calc(50% - 50px);
@@ -624,6 +631,10 @@ body {
     margin-top: 10px;
     margin-bottom: 20px;
   }
+}
+.footer-upsell-wrapper .footer-upsell-info .sign-up-button:hover {
+  background-color: #FF3998;
+  color: white;
 }
 .footer-upsell-wrapper .footer-upsell-image-wrapper {
   display: flex;
