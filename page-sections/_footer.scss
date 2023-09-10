@@ -1,15 +1,28 @@
 @use 'colors';
+@use 'responsive';
 
 .footer-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @include responsive.sm {
+    flex-direction: column;
+  }
+
 
   .footer-left-top-wrapper {
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    .footer-image {
+      height: 50px;
+
+      @include responsive.md {
+        height: 30px;
+      }
+    }
 
     .footer-logo-text {
       color: colors.$dark-grey;
@@ -19,6 +32,12 @@
       line-height: 100%;
       margin-top: 30px;
       margin-bottom: 32px;
+
+      @include responsive.md {
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 22px;
+      }
     }
 
     .socialmedia-wrapper {
@@ -34,6 +53,10 @@
 
         .social-icon {
           height: 18px;
+
+          @include responsive.md {
+            height: 14px;
+          }
         }
       }
     }
@@ -45,6 +68,24 @@
     justify-content: flex-end;
     column-gap: 106px;
 
+    @include responsive.md {
+      column-gap: 30px;
+    }
+
+    @include responsive.sm {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+
+    @include responsive.mobile {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 0;
+      row-gap: 15px;
+    }
+
       .footer-nav-title {
         color: colors.$dark-grey;
         font-size: 16px;
@@ -55,6 +96,14 @@
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 28px;
+
+        @include responsive.md {
+          font-size: 12px;
+        }
+
+        @include responsive.mobile {
+          font-size: 16px;
+        }
       }
 
       .footer-nav-list {
@@ -71,6 +120,10 @@
           font-weight: 400;
           line-height: 100%;
 
+          @include responsive.md {
+            font-size: 14px;
+          }
+
           .footer-nav-link {
             color: colors.$dark-grey;
             text-decoration: none;
@@ -83,7 +136,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 150px;
+    margin-top: 150px;
     margin-bottom: 71px;
 
     .copyright-text,
@@ -93,6 +146,23 @@
       font-style: normal;
       font-weight: 400;
       line-height: 100%;
+
+      @include responsive.md {
+        font-size: 12px;
+      }
+    }
+    @include responsive.sm {
+      .footer-date-text {
+        display: none;
+      }
+
+      margin-top: 100px;
+      margin-bottom: 30px;
+    }
+
+    @include responsive.mobile {
+      margin-top: 50px;
+      margin-bottom: 20px;
     }
   }
 }

@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'responsive';
 
 .hero-box {
   display: flex;
@@ -6,10 +7,23 @@
   margin-top: 182px;
   margin-bottom: 200px;
   column-gap: 80px;
-  align-items: center;
+
+  @include responsive.sm {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+
+  @include responsive.mobile {
+    margin-bottom: 80px;
+  }
 
   .title-wrapper {
     width: 50%;
+
+    @include responsive.sm {
+      width: 80%;
+    }
+
 
     .announcement {
       font-size: 16px;
@@ -20,6 +34,10 @@
       text-transform: uppercase;
       color: colors.$pink;
       margin: 24px 0;
+
+      @include responsive.md {
+        font-size: 12px;
+      }
     }
 
     h1 {
@@ -29,6 +47,14 @@
       line-height: normal;
       color: colors.$black;
       margin: 0;
+
+      @include responsive.md {
+        font-size: 60px;
+      }
+
+      @include responsive.mobile {
+        font-size: 48px;
+      }
     }
 
     .title-text {
@@ -38,6 +64,15 @@
       line-height: 150%;
       color: colors.$dark-grey;
       margin: 32px 0;
+
+      @include responsive.md {
+        font-size: 16px;
+        width: 80%;
+      }
+
+      @include responsive.mobile {
+        margin: 20px 0;
+      }
     }
 
     .sign-up-button {
@@ -59,10 +94,37 @@
       transition-property: background-color, color,border-color;
       transition-duration: 0.3s;
       transition-timing-function: ease;
+
+      @include responsive.md {
+        font-size: 16px;
+        padding: 15px 45px 17px;
+      }
+
+      @include responsive.mobile {
+        margin-top: 30px;
+      }
     }
   }
 
   .title-image {
-    width: 50%;
+    width: calc(100% / 2 - 50px);
+
+    @include responsive.md {
+      width: calc(100% / 2 - 50px);
+      position: absolute;
+      right: -35px;
+    }
+
+    @include responsive.sm {
+      width: 80%;
+      position: absolute;
+      right: -220px;
+    }
+
+    @include responsive.mobile {
+      width: 70%;
+      position: absolute;
+      right: -120px;
+    }
   }
 }

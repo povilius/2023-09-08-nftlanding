@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'responsive';
 
 .showcase-title {
   color: colors.$black;
@@ -7,6 +8,10 @@
   font-weight: 500;
   line-height: normal;
   margin: 0;
+
+  @include responsive.md {
+    font-size: 30px;
+  }
 }
 
 .showcase-text {
@@ -18,19 +23,28 @@
   margin-top: 24px;
   margin-bottom: 56px;
 
+  @include responsive.md {
+    font-size: 16px;
+  }
+
   .underline {
     color: colors.$dark-grey;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
-    text-decoration-line: underline; 
+    text-decoration-line: underline;
+
+    @include responsive.md {
+      font-size: 16px;
+    }
   }
 }
 
 .showcase-content-wrapper {
   display: flex;
   justify-content: space-between;
+  
 
   .showcase-item-1,
   .showcase-item-2,
@@ -38,8 +52,19 @@
   .showcase-item-4 {
     display: flex;
     flex-direction: column;
+    width: calc(100% / 4 - 5%);
     background-color: colors.$light-grey;
     border-radius: 16px;
+
+    @include responsive.sm {
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+
+    .showcase-image {
+      width: 100%;
+    }
 
     .showcase-info-wrapper {
       display: flex;
@@ -126,6 +151,19 @@
           margin: 0;
         }
       }
+    }
+  }
+
+  @include responsive.lg {
+    .showcase-item-4 {
+      display: none;
+    }
+  }
+
+  @include responsive.sm {
+    .showcase-item-2,
+    .showcase-item-3 {
+      display: none;
     }
   }
 }
